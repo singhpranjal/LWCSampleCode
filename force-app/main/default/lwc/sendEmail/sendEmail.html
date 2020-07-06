@@ -1,0 +1,36 @@
+<template>
+    <lightning-card
+    title="Email selected contacts"
+    icon-name="standard:contact" >
+        <br />
+        <div style="width: auto;">
+            <template if:true={contactList.data}>
+                <div class="slds-grid slds-gutters slds-p-around_medium">
+                    <div class="slds-col">
+                        <p style="margin-left: 5%;">
+                            Selected Records: <b style="color: red;">{recordsCount}</b>
+                        </p>
+                    </div>
+                    <div class="slds-col_bump-right">
+                        <lightning-button
+                            label={buttonLabel}
+                            icon-name="utility:contact"
+                            disabled={buttonDisabled}
+                            variant="brand"
+                            onclick={sendEmail}
+                            >
+                        </lightning-button>
+                    </div>
+                </div>
+                <br />
+            
+        <lightning-datatable
+          data={contactList.data}
+          columns={columns}
+          key-field="id"
+          onrowselection={getSelectedRecords}
+        ></lightning-datatable>
+      </template>
+    </div>
+    </lightning-card>
+</template>
