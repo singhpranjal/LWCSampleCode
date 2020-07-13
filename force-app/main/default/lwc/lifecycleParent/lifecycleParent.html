@@ -1,0 +1,10 @@
+<template>
+    <lightning-card>
+        Parent Component <br/>
+        <lightning-input type="toggle" label="Make changes in parent" name="componentSwitch" checked onchange={handleChange}></lightning-input>
+        {isVisible}
+        <lightning-input type="toggle" label="Show Screen Two" name="componentSwitch" onchange={handleDisplayChange}></lightning-input>
+        <br/>
+        <c-lifecycle screen-two-enabled={displayScreenTwo}></c-lifecycle>
+    </lightning-card>
+</template>

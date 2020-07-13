@@ -1,0 +1,6 @@
+<template>
+    
+    <lightning-input type="toggle" label="Display Component" name="componentSwitch" checked onchange={handleChange}></lightning-input>
+
+    <c-lifecycle-parent if:true={isVisible} ></c-lifecycle-parent>
+</template>
