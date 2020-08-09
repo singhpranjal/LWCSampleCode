@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Accounts" icon-name="custom:custom44">
+        <div class="slds-m-around_medium">
+            <lightning-button label="Refresh" title="Refresh" onclick={refreshRecords} class="slds-m-left_x-small"></lightning-button> 
+            <lightning-input type="search" onchange={handleKeyChange} class="slds-m-bottom_small" label="Search" value={searchKey}></lightning-input>
+            <div if:true={accounts}>
+                <template if:true={accounts.data}>
+                    <template for:each={accounts.data} for:item="account">
+                        <p key={account.Id}>{account.Name}</p>
+                    </template>
+                </template>
+                <template if:true={accounts.error}>
+                    {accounts.error}
+                </template>
+            </div>
+        </div>
+    </lightning-card>
+</template>
