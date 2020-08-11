@@ -1,0 +1,26 @@
+<template>
+    <lightning-card title={objInfo.labelPlural} icon-name="custom:custom44">
+        <div class="slds-m-around_medium">
+            <lightning-layout>
+                <lightning-layout-item padding="around-small">
+                    <div class="header-column">
+                        <p class="field-title" title="Field 1">Object Label</p>
+                        <p>{objInfo.label}</p>
+                    </div>
+                </lightning-layout-item>
+                <lightning-layout-item padding="around-small">
+                    <div class="header-column">
+                        <p class="field-title" title="Field 1">Object API Name</p>
+                        <p>{objInfo.apiName}</p>
+                    </div>
+                </lightning-layout-item>
+                <lightning-layout-item padding="around-small">
+                    <div class="header-column">
+                        <p class="field-title" title="Field 1">Is Custom?</p>
+                        <p>{objInfo.custom}</p>
+                    </div>
+                </lightning-layout-item>
+            </lightning-layout>
+        </div>
+    </lightning-card>
+</template>

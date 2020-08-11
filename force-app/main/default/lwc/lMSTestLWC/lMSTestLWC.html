@@ -1,0 +1,26 @@
+<template>
+    <lightning-card icon-name="standard:opportunity">
+        <h1 slot="title">LWC Component</h1>
+        <lightning-layout multiple-rows>
+            <lightning-layout-item size="12">
+                <lightning-textarea value={receivedMessage}>
+                </lightning-textarea>
+            </lightning-layout-item>
+            <lightning-layout-item size="12">
+                <div style="height: 10px;"></div>
+            </lightning-layout-item>
+            <lightning-layout-item size="4">
+                <lightning-button label="Subscribe" onclick={subscribeMC}>
+                </lightning-button>
+            </lightning-layout-item>
+            <lightning-layout-item size="4">
+                <lightning-button label="Unsubscribe" onclick={unsubscribeMC}>  
+                </lightning-button>
+            </lightning-layout-item>
+            <lightning-layout-item size="4">
+                <lightning-button label="Publish message" onclick={publishMC}>
+                </lightning-button>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>

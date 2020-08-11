@@ -1,0 +1,24 @@
+<aura:component implements="force:hasRecordId,lightning:isUrlAddressable,flexipage:availableForAllPageTypes">
+    <aura:attribute type="String" name="receivedMessage"></aura:attribute>
+
+    <lightning:messageChannel type="SampleMessageChannel__c"
+    onMessage="{!c.handleMessage}" aura:id="sampleMessageChannel"/>
+    <lightning:messageChannel type="AuraMessageChannelToLWC__c" aura:id="auraToLwcMC"/>
+    
+    <lightning:card iconName="action:fallback" title="Aura Component">
+        <lightning:layout multipleRows="true">
+            <lightning:layoutItem size="12">
+                <lightning:textArea value="{!v.receivedMessage}">
+                </lightning:textArea>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="12">
+                <div style="height: 10px;"></div>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="4">
+                <lightning:button label="Publish message" onclick="{!c.publishMC}">
+                </lightning:button>
+            </lightning:layoutItem>
+        </lightning:layout>
+    </lightning:card>
+
+</aura:component>
